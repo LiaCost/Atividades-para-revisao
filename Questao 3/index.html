@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 8px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        .remover-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu carrinho de compras</h1>
+
+    <div class="container">
+        <h2>Adicionar item</h2>
+        <input type="text" id="input-item" placeholder="Nome do item">
+        <button id="adicionar-btn">Adicionar ao carrinho</button>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Itens no carrinho (<span id="contador-itens">0</span>)</h2>
+        <ul id="lista-carrinho">
+            </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de elementos HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        input, button, select {
+            margin: 5px 0;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        .resultado {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px dashed #999;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de elementos HTML</h1>
+
+    <h2>Criar Parágrafo</h2>
+    <input type="text" id="input-paragrafo" placeholder="Digite o texto do parágrafo">
+    <button onclick="criarParagrafo()">Criar Parágrafo</button>
+    <div id="paragrafo-resultado" class="resultado"></div>
+
+    <hr>
+
+    <h2>Criar Lista</h2>
+    <p>Escolha o tipo e digite os itens separados por vírgula.</p>
+    <select id="select-lista">
+        <option value="ul">Não Ordenada</option>
+        <option value="ol">Ordenada</option>
+    </select>
+    <input type="text" id="input-lista" placeholder="Item 1, Item 2, Item 3">
+    <button onclick="criarLista()">Criar Lista</button>
+    <div id="lista-resultado" class="resultado"></div>
+
+    <hr>
+
+    <h2>Criar Link</h2>
+    <input type="text" id="input-link-texto" placeholder="Texto do link">
+    <input type="text" id="input-link-url" placeholder="URL (ex: https://google.com)">
+    <button onclick="criarLink()">Criar Link</button>
+    <div id="link-resultado" class="resultado"></div>
+
+    <hr>
+
+    <h2>Criar Tabela</h2>
+    <p>Defina os cabeçalhos separados por vírgula.</p>
+    <input type="text" id="input-tabela-cabecalhos" placeholder="Ex: Nome, Idade, Cidade">
+    <button onclick="adicionarCamposParaDados()">Criar Cabeçalhos</button>
+
+    <div id="tabela-dinamica">
+        </div>
+    
+    <button id="gerar-tabela-btn" style="display:none;" onclick="criarTabela()">Gerar Tabela</button>
+    <div id="tabela-resultado" class="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
